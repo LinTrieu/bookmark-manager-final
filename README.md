@@ -49,6 +49,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 ![First user story](https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png)
 
 --------------------------
+
 #### User Stories
 
 ```bash
