@@ -30,6 +30,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 5. Creating your First Table
 6. Manipulating Table Data
 7. Interacting with Postgres from Ruby [OUTSTANDING AT COB 03-JUN]
+
 8. Upgrading your Toolset
 9. Setting up a Testing Environment
 10. Creating bookmarks
