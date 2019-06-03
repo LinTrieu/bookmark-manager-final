@@ -21,7 +21,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 * 06/06/19 - 
 
 --------------------------
-### Challenges
+#### Challenges
 
 1. Creating User Stories
 2. Setting up a Web Project
@@ -45,11 +45,11 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 
 --------------------------
 
-### Domain Model
+#### Domain Model
 ![First user story](https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png)
 
 --------------------------
-### User Stories
+#### User Stories
 
 ```bash
 As a time-pressed user
