@@ -9,7 +9,7 @@ class Bookmark
 
   def all
     begin 
-      con = PG.connect :dbname => 'bookmark_manager', :user => 'linna@paddle.com'
+      con = PG.connect(:dbname => 'bookmark_manager')
       
       rs = con.exec "SELECT * FROM bookmarks"
   
@@ -20,6 +20,6 @@ class Bookmark
   end
 end
 
-# b = Bookmark.new
-# b.all
-# pp b.list
+b = Bookmark.new
+b.all
+pp b.list
