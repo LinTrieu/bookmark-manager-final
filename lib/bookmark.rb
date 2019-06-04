@@ -9,5 +9,3 @@ class Bookmark
     result.map{ |bookmark| bookmark['url'] }
   end
 end
-
-pp Bookmark.all
