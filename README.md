@@ -14,7 +14,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 
 * 03/06/19 - Lin and Jayda
 
-* 04/06/19 - 
+* 04/06/19 - Lin and Peter
 
 * 05/06/19 - 
 
@@ -29,10 +29,12 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 4. Setting up a Database
 5. Creating your First Table
 6. Manipulating Table Data
-7. Interacting with Postgres from Ruby [OUTSTANDING AT COB 03-JUN]
+7. Interacting with Postgres from Ruby [COB 03-JUN]
 8. Upgrading your Toolset
-9. Setting up a Testing Environment
-10. Creating bookmarks
+9. Setting up a Testing Environment 
+10. Creating bookmarks [COB 04-JUN]
+
+#### Outstanding
 11. Wrapping Database data in program objects
 12. Deleting bookmarks
 13. CRUD
