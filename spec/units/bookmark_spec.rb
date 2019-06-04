@@ -1,9 +1,9 @@
 require 'bookmark'
 
 describe Bookmark do
-  let(:bookmark) { Bookmark.new }
+  # let(:bookmark) { Bookmark.new }
 
-  it 'returns a list of bookmarks' do
+  it '.all returns a list of bookmarks' do
     bookmark.all
     output = bookmark.list
     expect(output).to include("http://makers.tech")
