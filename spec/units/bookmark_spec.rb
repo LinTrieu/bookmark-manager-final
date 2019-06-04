@@ -1,6 +1,8 @@
 require 'bookmark'
 
 describe Bookmark do
+  before(:each) { truncates }
+  before(:each) { add_bookmarks }
 
   it '.all returns a list of bookmarks' do
     output = Bookmark.all

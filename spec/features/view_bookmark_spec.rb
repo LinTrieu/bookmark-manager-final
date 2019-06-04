@@ -1,4 +1,6 @@
 feature 'view all bookmarks' do
+  background { truncates }
+  background { add_bookmarks }
 
   scenario 'user can see bookmarks' do
     visit('/bookmarks')
