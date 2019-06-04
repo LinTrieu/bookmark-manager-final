@@ -16,7 +16,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 
 * 04/06/19 - Lin and Peter
 
-* 05/06/19 - 
+* 05/06/19 - Lin and Lauren 
 
 * 06/06/19 - 
 
