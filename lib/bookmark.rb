@@ -1,29 +1,13 @@
 require 'pg'
+require_relative 'database_connection'
 
 class Bookmark
 
-  # def self.all
-  #   result = DatabaseConnection.query('SELECT * FROM bookmarks')
-  #   result.map{ |row| Bookmark.new(row['id'],row['url']) }
-  # end
-
   def self.all
+    DatabaseConnection.setup
     result = DatabaseConnection.query('SELECT * FROM bookmarks')
-    result.map{ |row| Bookmark.new(row['id'],row['url']) }
+    result.map{ |bookmark| bookmark['url'] }
   end
-
 end
 
-puts Bookmark.all
-
-# Previous code before attempts to code class methods self
-# begin 
-#   con = PG.connect(:dbname => 'bookmark_manager')  
-#   rs = con.exec "SELECT * FROM bookmarks"
-#   rs.each do |row|
-#     @list << "%s" % [row['url']]
-#   end
-# end
-# b = Bookmark.new
-# b.all
-# pp b.list
+pp Bookmark.all

@@ -2,7 +2,7 @@ require 'pg'
 
 class DatabaseConnection
   def self.setup
-    @connection = PG.connect :dbname => 'bookmark_manager'
+    @connection = PG.connect(:dbname => 'bookmark_manager')
   end
 
   def self.current_connection
