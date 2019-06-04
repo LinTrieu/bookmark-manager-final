@@ -1,3 +1,3 @@
-require './lib/database_connection'
+# require './lib/database_connection'
 
-DatabaseConnection.setup
+# DatabaseConnection.setup
