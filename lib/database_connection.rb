@@ -2,7 +2,11 @@ require 'pg'
 
 class DatabaseConnection
   def self.setup
-    @connection = PG.connect(:dbname => 'bookmark_manager')
+    if ENV['ENVIRONMENT'] == 'test'
+      @connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      @connection = PG.connect(dbname: 'bookmark_manager')
+    end
   end
 
   def self.current_connection
