@@ -1,6 +1,25 @@
-<form action="/bookmarks" method='post'>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Bookmarks </title>
+  </head>
+
+  <body>
+    <h1> Bookmark Manager </h1>
+    <form action="/">
+      <input type="submit" value="Homepage">
+    </form>
+    <form action="/bookmarks">
+      <input type="submit" value="View all bookmarks">
+    </form>
+    
+    <h2> Update bookmark </h2>
+    <h4> Bookmark <%= @id %> </h4>
+    <form action="/bookmarks" method='post'>
           <input type="hidden" name="id" value="<%= @id %>">
-          <input type="text" name="title" placeholder="Title">
-          <input type="text" name="url" placeholder="Bookmark URL">
+          <input type="text" name="title" placeholder="New title">
+          <input type="text" name="url" placeholder="New URL">
           <input type="submit" name="update" value="Update">
-</form>
+    </form>
+  </body>
+</html>
