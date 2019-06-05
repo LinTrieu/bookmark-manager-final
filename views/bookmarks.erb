@@ -1,5 +1,25 @@
-<h2> <%= @list %> <h2>
+<html>
+  <head>
+    <title> Bookmarks </title>
 
-<form action="/">
-  <input type="submit" value="Return to Homepage">
-</form>
+  </head>
+
+  <body>
+    <h2> Your bookmarks </h2>
+
+    <ul>
+      <% @list.each do |bookmark| %> 
+        <li> <%= bookmark %></li>
+      <% end %>
+    </ul>
+
+    <form action="/">
+      <input type="submit" value="Return to Homepage">
+    </form>
+
+  </body>
+</html>
+
+<%# <%= @list.each { |bookmark| puts bookmark } %> 
+
+    
