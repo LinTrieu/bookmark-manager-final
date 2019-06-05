@@ -14,7 +14,7 @@ feature 'On bookmarks page' do
 
   scenario 'user can delete bookmark' do
     visit('/bookmarks')
-    click_button 'Delete 3'
+    click_button 'delete_3'
     expect(page).not_to have_link('Google')
   end
 
