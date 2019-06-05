@@ -14,9 +14,3 @@ class Bookmark
   end
 
 end
-
-######
-# DatabaseConnection.query("INSERT INTO bookmarks(url) 
-# VALUES ('http://www.makersacademy.com'),
-#        ('http://www.destroyallsoftware.com'),
-#        ('http://www.google.com')")

@@ -5,18 +5,23 @@
   </head>
 
   <body>
-    <h2> Your bookmarks </h2>
+    <h1> Bookmark Manager </h1>
+    <form action="/">
+      <input type="submit" value="Homepage">
+    </form>  
+    </br>
 
+    <h2> Your bookmarks </h2>
     <ul>
       <% @list.each do |bookmark| %> 
         <li> <%= bookmark %></li>
       <% end %>
     </ul>
 
-    <form action="/">
-      <input type="submit" value="Return to Homepage">
-    </form>
-
+    </br>
+    <form action="/new_bookmark">
+      <input type="submit" value="Add a new bookmark">
+    </form>  
   </body>
 </html>
 

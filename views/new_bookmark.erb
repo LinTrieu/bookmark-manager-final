@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Bookmarks </title>
+  </head>
+
+  <body>
+    <h1> Bookmark Manager </h1>
+    <form action="/">
+      <input type="submit" value="Homepage">
+    </form>  
+
+    <h2> Create a new bookmark </h2>
+    </br>
+    <form action="/new_bookmark" method="post">
+      <input type="text" name="new_bookmark" placeholder="Bookmark URL">
+      <input type="submit" name="create_new_bookmark" value="Add new Bookmark">
+    </form>
+    <h4> <%= @new_url %> has been added to Bookmark Manager <h4> 
+
+  </body>
+</html>
