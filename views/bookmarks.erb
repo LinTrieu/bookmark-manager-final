@@ -14,7 +14,7 @@
     <h2> Your bookmarks </h2>
     <ul>
       <% @list.each do |bookmark| %> 
-        <li> <%= bookmark %></li>
+        <li> <a href="<%=bookmark['url']%>"> <%=bookmark['title']%></a></li>
       <% end %>
     </ul>
 

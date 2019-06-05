@@ -7,7 +7,6 @@ feature 'Submit a new bookmark to Bookmark Manager' do
     fill_in('url', with: 'https://www.facebook.com/')
     fill_in('title', with: 'Facebook')
     click_button 'Add new Bookmark'
-    expect(page).to have_content('https://www.facebook.com/')
     expect(page).to have_content('Facebook')
   end
 
