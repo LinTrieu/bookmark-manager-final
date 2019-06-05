@@ -7,4 +7,16 @@ class Bookmark
     result = DatabaseConnection.query('SELECT * FROM bookmarks')
     result.map{ |row| row['url'] }
   end
+
+  def self.create(new_bookmark)
+    result = DatabaseConnection.query('INSERT INTO bookmarks(url) 
+                                       VALUES(new_bookmark)')
+  end
+
 end
+
+######
+# DatabaseConnection.query("INSERT INTO bookmarks(url) 
+# VALUES ('http://www.makersacademy.com'),
+#        ('http://www.destroyallsoftware.com'),
+#        ('http://www.google.com')")
