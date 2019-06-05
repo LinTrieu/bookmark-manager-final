@@ -12,4 +12,10 @@ describe DatabaseConnection do
     expect(PG).to receive(:connect).with(dbname: 'bookmark_manager_test')
     DatabaseConnection.setup
   end 
+
+  it 'executres a query via PG' do 
+    connection = DatabaseConnection.setup
+    expect(connection).to receive(:exec).with("SELECT * FROM bookmarks")
+    DatabaseConnection.query("SELECT * FROM bookmarks")
+  end 
 end
