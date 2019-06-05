@@ -15,6 +15,11 @@
     <ul>
       <% @list.each do |bookmark| %> 
         <li> <a href="<%=bookmark['url']%>"> <%=bookmark['title']%></a></li>
+        
+        <form action="/delete" method='post'> 
+          <input type="submit" name="delete_<%=bookmark['id']%>" value="Delete <%=bookmark['id']%>">
+        </form>  
+      
       <% end %>
     </ul>
 

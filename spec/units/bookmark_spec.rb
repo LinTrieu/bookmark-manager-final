@@ -16,4 +16,10 @@ describe Bookmark do
     expect(output.last['url']).to include('http://www.facebook.com')
     expect(output.last['title']).to include('Facebook')
   end 
+
+  it 'deletes a bookmark' do 
+    Bookmark.delete(3)
+    output = Bookmark.all
+    expect(output.last['title']).not_to eq('Google')
+  end 
 end
