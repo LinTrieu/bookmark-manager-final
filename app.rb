@@ -1,5 +1,7 @@
+require 'sinatra/flash'
 require 'sinatra/base'
 require './lib/bookmark.rb'
+enable :sessions
 
 class BookmarkManager < Sinatra::Base
 
