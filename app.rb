@@ -9,13 +9,25 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks' do
     @list = Bookmark.all
-    @new_url = Bookmark.create(params['create_bookmark'])
     erb :bookmarks
+  end
+
+  post '/submit' do
+    session[:new_url] = Bookmark.create(params['create_bookmark'])
+    redirect '/new'
+  end
+
+  get '/new' do
+    @new_url = session[:new_url]
+    erb :new
   end
 
   run! if app_file == $0
 end
 
 
-# @new_url = params['create_bookmark']
-# Boookmark.create(@new_url)
+# get '/bookmarks' do
+#   @list = Bookmark.all
+#   @new_url = Bookmark.create(params['create_bookmark'])
+#   erb :bookmarks
+# end
