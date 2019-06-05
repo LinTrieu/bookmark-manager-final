@@ -5,11 +5,11 @@ class Bookmark
 
   def self.all
     result = DatabaseConnection.query('SELECT * FROM bookmarks')
-    result.map{ |row| row['url'] }
+    result.map { |row| row }
   end
 
-  def self.create(new_bookmark)
-    DatabaseConnection.query("INSERT INTO bookmarks (url) 
-                              VALUES ('#{new_bookmark}')")
+  def self.create(new_bookmark, title)
+    DatabaseConnection.query("INSERT INTO bookmarks (url, title) 
+                              VALUES ('#{new_bookmark}', '#{title}')")
   end
 end

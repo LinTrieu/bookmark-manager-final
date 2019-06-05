@@ -6,8 +6,14 @@ describe Bookmark do
 
   it '.all method returns a list of bookmarks' do
     output = Bookmark.all
-    expect(output).to include("http://www.makersacademy.com")
-    expect(output).to include("http://www.destroyallsoftware.com")
-    expect(output).to include("http://www.google.com")
+    expect(output[0]['url']).to include("http://www.makersacademy.com")
+    expect(output[0]['title']).to include("Makers")
   end
+
+  it 'after .create, .all returns a new url and title' do 
+    Bookmark.create('http://www.facebook.com', 'Facebook')
+    output = Bookmark.all
+    expect(output.last['url']).to include('http://www.facebook.com')
+    expect(output.last['title']).to include('Facebook')
+  end 
 end

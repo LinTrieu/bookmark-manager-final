@@ -3,8 +3,8 @@ def truncates
 end
 
 def add_bookmarks
-  DatabaseConnection.query("INSERT INTO bookmarks(url) 
-                            VALUES ('http://www.makersacademy.com'),
-                                   ('http://www.destroyallsoftware.com'),
-                                   ('http://www.google.com')")
+  DatabaseConnection.query("INSERT INTO bookmarks(url,title) 
+                            VALUES ('http://www.makersacademy.com','Makers'),
+                                   ('http://www.destroyallsoftware.com', 'Destroy'),
+                                   ('http://www.google.com', 'Google')")
 end
