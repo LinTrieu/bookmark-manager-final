@@ -9,7 +9,7 @@ class Bookmark
   end
 
   def self.create(new_bookmark)
-    result = DatabaseConnection.query("INSERT INTO bookmarks (url) 
-                                       VALUES ('#{new_bookmark}')")
+    DatabaseConnection.query("INSERT INTO bookmarks (url) 
+                              VALUES ('#{new_bookmark}')")
   end
 end
