@@ -18,4 +18,13 @@ feature 'On bookmarks page' do
     expect(page).not_to have_link('Google')
   end
 
+  scenario 'user can update bookmark' do 
+    visit('/bookmarks')
+    click_button 'update_3'
+    fill_in 'url', with: 'http://yahoo.com'
+    fill_in 'title', with: 'Yahoo'
+    click_button 'Update'
+    expect(page).to have_content 'Yahoo'
+  end 
+
 end

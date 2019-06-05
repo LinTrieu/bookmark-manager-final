@@ -9,7 +9,7 @@
     <form action="/">
       <input type="submit" value="Homepage">
     </form>  
-    </br>
+    <br>
 
     <h2> Your bookmarks </h2>
     <ul>
@@ -19,8 +19,13 @@
         <form action="/delete" method='post'> 
           <input type="hidden" name="id" value="<%=bookmark['id']%>">
           <input type="submit" name="delete_<%=bookmark['id']%>" value="Delete">
-        </form>  
-      
+        </form> 
+
+        <form action="/update" method='get'> 
+          <input type="hidden" name="id" value="<%=bookmark['id']%>">
+          <input type="submit" name="update_<%=bookmark['id']%>" value="Update">
+        </form>
+         <br>
       <% end %>
     </ul>
 

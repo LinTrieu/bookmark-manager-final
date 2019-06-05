@@ -16,4 +16,10 @@ class Bookmark
   def self.delete(id)
     DatabaseConnection.query("DELETE FROM bookmarks WHERE id=#{id}")
   end
+  
+  def self.update(id, title, url)
+    DatabaseConnection.query("UPDATE bookmarks 
+                            SET title='#{title}', url='#{url}'
+                            WHERE id=#{id}")
+  end
 end

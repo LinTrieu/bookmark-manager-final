@@ -22,4 +22,10 @@ describe Bookmark do
     output = Bookmark.all
     expect(output.last['title']).not_to eq('Google')
   end 
+
+  it 'updates a bookmark' do
+    Bookmark.update(3, 'Yahoo', 'yahoo.co.uk')
+    output = Bookmark.all
+    expect(output.last['title']).to eq('Yahoo')
+  end
 end
