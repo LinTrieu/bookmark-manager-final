@@ -12,14 +12,13 @@ class BookmarkManager < Sinatra::Base
     erb :bookmarks
   end
 
-  post '/submit' do
-    session[:new_url] = Bookmark.create(params['create_bookmark'])
-    redirect '/new'
+  get '/new' do
+    erb :new
   end
 
-  get '/new' do
-    @new_url = session[:new_url]
-    erb :new
+  post '/submit' do
+    @new_url = Bookmark.create(url: params[:urls])
+    redirect '/new'
   end
 
   run! if app_file == $0
