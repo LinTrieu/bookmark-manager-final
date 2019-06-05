@@ -33,12 +33,12 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 8. Upgrading your Toolset
 9. Setting up a Testing Environment 
 10. Creating bookmarks [COB 04-JUN]
-
-#### Outstanding
 11. Wrapping Database data in program objects
 12. Deleting bookmarks
 13. CRUD
-14. Extracting a Database Setup object
+14. Extracting a Database Setup object [COB 05-JUN]
+
+#### Outstanding
 15. Validating bookmarks
 16. One to Many Relationships
 17. Many to Many Relationships
