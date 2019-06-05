@@ -1,5 +1,5 @@
 def truncates
-  DatabaseConnection.query('TRUNCATE TABLE bookmarks')
+  DatabaseConnection.query('TRUNCATE bookmarks RESTART IDENTITY CASCADE')
 end
 
 def add_bookmarks
