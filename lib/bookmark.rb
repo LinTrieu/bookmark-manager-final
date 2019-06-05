@@ -12,4 +12,8 @@ class Bookmark
     DatabaseConnection.query("INSERT INTO bookmarks (url, title) 
                               VALUES ('#{new_bookmark}', '#{title}')")
   end
+
+  def self.delete(id)
+    DatabaseConnection.query("DELETE FROM bookmarks WHERE id=#{id}")
+  end
 end
