@@ -7,4 +7,9 @@ describe DatabaseConnection do
   it 'returns a pg instance' do
     expect(DatabaseConnection.setup).to be_a(PG::Connection)
   end
+
+  it 'sets up a connection to a databsae through PG' do 
+    expect(PG).to receive(:connect).with(dbname: 'bookmark_manager_test')
+    DatabaseConnection.setup
+  end 
 end
