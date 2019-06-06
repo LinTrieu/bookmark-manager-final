@@ -17,7 +17,7 @@
     <h2> Your bookmarks </h2>
     <ul>
       <% @list.each do |bookmark| %> 
-        <li> <a href="<%=bookmark['url']%>"> <%=bookmark['title']%></a></li>
+        <li> <a href="<%=bookmark['url']%>"> <%=bookmark['title']%> </a> </li>
         
         <form action="/delete" method='post'> 
           <input type="hidden" name="id" value="<%=bookmark['id']%>">
@@ -34,8 +34,7 @@
           <input type="text" id="text_<%=bookmark['id']%>" name="text">
           <input type="submit" name="comment_<%=bookmark['id']%>" value="Submit comment">
         </form>
-
-         <br>
+        <br>
       <% end %>
     </ul>
   </body>

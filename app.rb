@@ -29,7 +29,6 @@ class BookmarkManager < Sinatra::Base
       flash[:error]
       redirect '/new'
     end
-     
   end
 
   post '/delete' do 
@@ -47,9 +46,10 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end 
 
-  post '/comment' do 
+  post '/comment' do     
     Comment.add(params[:id], params[:text])
     redirect '/bookmarks'
   end
+
   run! if app_file == $0
 end

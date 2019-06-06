@@ -27,6 +27,6 @@ class Bookmark
   def self.valid?(url)
     check = url =~ /\A#{URI::regexp(['http', 'https'])}\z/
     check == 0 
-    end
+  end
 
 end

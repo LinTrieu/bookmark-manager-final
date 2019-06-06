@@ -18,7 +18,7 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 
 * 05/06/19 - Lin and Lauren 
 
-* 06/06/19 - 
+* 06/06/19 - Lin and Lauren
 
 --------------------------
 #### Challenges
@@ -37,11 +37,11 @@ Link to challenge instructions: https://github.com/makersacademy/course/blob/mas
 12. Deleting bookmarks
 13. CRUD
 14. Extracting a Database Setup object [COB 05-JUN]
+15. Validating bookmarks [COB 06-JUN]
 
 #### Outstanding
-15. Validating bookmarks
-16. One to Many Relationships
-17. Many to Many Relationships
+16. One-to-Many Relationships
+17. Many-to-Many Relationships
 18. Registration
 19. Authentication
 
