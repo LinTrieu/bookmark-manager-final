@@ -15,6 +15,7 @@ feature 'Submit new bookmark' do
     fill_in('url', with: 'wwwww.yahoo.co.uuk')
     click_button 'Add new Bookmark'
     expect(page).not_to have_content('wwwww.yahoo.co.uuk')
-    expect(page).to have_content('Invalid URL, please try again.')
+    expect(page).to have_content('Invalid URL')
+    # expect(flash[:error]).to match(/Invalid URL/)
   end
 end
