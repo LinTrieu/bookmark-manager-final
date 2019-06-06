@@ -13,7 +13,7 @@ describe DatabaseConnection do
     DatabaseConnection.setup
   end 
 
-  it 'executres a query via PG' do 
+  it 'executes a query via PG' do 
     connection = DatabaseConnection.setup
     expect(connection).to receive(:exec).with("SELECT * FROM bookmarks")
     DatabaseConnection.query("SELECT * FROM bookmarks")

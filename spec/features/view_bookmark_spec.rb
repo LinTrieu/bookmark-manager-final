@@ -27,4 +27,11 @@ feature 'On bookmarks page' do
     expect(page).to have_content 'Yahoo'
   end 
 
+  scenario 'user can add a comment on bookmark' do
+    visit('/bookmarks')
+    fill_in 'text_1', with: 'helpful link'
+    click_button 'comment_1'
+    expect(page).to have_content 'helpful link'
+  end
+
 end

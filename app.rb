@@ -1,6 +1,7 @@
 require 'sinatra/flash'
 require 'sinatra/base'
 require './lib/bookmark.rb'
+require './lib/comment.rb'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
@@ -46,5 +47,9 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end 
 
+  post '/comment' do 
+    Comment.add(params[:id], params[:text])
+    redirect '/bookmarks'
+  end
   run! if app_file == $0
 end

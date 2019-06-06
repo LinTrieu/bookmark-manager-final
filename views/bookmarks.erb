@@ -28,6 +28,13 @@
           <input type="hidden" name="id" value="<%=bookmark['id']%>">
           <input type="submit" name="update_<%=bookmark['id']%>" value="Update">
         </form>
+
+        <form action="/comment" method='post'> 
+          <input type="hidden" name="id" value="<%=bookmark['id']%>">
+          <input type="text" id="text_<%=bookmark['id']%>" name="text">
+          <input type="submit" name="comment_<%=bookmark['id']%>" value="Submit comment">
+        </form>
+
          <br>
       <% end %>
     </ul>
