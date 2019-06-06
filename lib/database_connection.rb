@@ -17,6 +17,7 @@ class DatabaseConnection
       @connection = PG.connect(dbname: 'bookmark_manager_test')
     else
       @connection = PG.connect(dbname: 'bookmark_manager')
+      # ALTER SEQUENCE bookmarks RESTART
     end
   end
 end

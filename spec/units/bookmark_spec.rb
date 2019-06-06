@@ -24,8 +24,14 @@ describe Bookmark do
   end 
 
   it 'updates a bookmark' do
-    Bookmark.update(3, 'Yahoo', 'yahoo.co.uk')
+    Bookmark.update(3, 'Yahoo', 'www.yahoo.co.uk')
     output = Bookmark.all
     expect(output.last['title']).to eq('Yahoo')
   end
+
+  it 'check if URL is valid' do
+    output = Bookmark.valid?('http://www.makersacademy.com')
+    expect(output).to eq(true)
+  end
+
 end

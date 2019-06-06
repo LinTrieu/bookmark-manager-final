@@ -1,4 +1,5 @@
 require 'pg'
+require 'uri'
 require_relative 'database_connection'
 
 class Bookmark
@@ -8,9 +9,9 @@ class Bookmark
     result.map { |row| row }
   end
 
-  def self.create(new_bookmark, title)
-    DatabaseConnection.query("INSERT INTO bookmarks (url, title) 
-                              VALUES ('#{new_bookmark}', '#{title}')")
+  def self.create(new_url, title)
+      DatabaseConnection.query("INSERT INTO bookmarks (url, title) 
+                              VALUES ('#{new_url}', '#{title}')")      
   end
 
   def self.delete(id)
@@ -22,4 +23,10 @@ class Bookmark
                             SET title='#{title}', url='#{url}'
                             WHERE id=#{id}")
   end
+
+  def self.valid?(url)
+    check = url =~ /\A#{URI::regexp(['http', 'https'])}\z/
+    check == 0 
+    end
+
 end

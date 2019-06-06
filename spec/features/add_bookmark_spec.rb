@@ -1,8 +1,8 @@
-feature 'Submit a new bookmark to Bookmark Manager' do
+feature 'Submit new bookmark' do
   background { truncates }
   background { add_bookmarks }
 
-  scenario 'user can submit a new bookmark and can see new bookmark' do
+  scenario 'submits a new bookmark and displays' do
     visit('/new')
     fill_in('url', with: 'https://www.facebook.com/')
     fill_in('title', with: 'Facebook')
@@ -12,9 +12,9 @@ feature 'Submit a new bookmark to Bookmark Manager' do
 
   scenario 'display error message if invalid URL' do
     visit '/new'
-    fill_in('url', with: 'www.yahoo.co.uk')
+    fill_in('url', with: 'wwwww.yahoo.co.uuk')
     click_button 'Add new Bookmark'
-    expect(page).to raise_error
-  end 
-
+    expect(page).not_to have_content('wwwww.yahoo.co.uuk')
+    expect(page).to have_content('Invalid URL, please try again.')
+  end
 end
